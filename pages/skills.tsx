@@ -24,45 +24,45 @@ const SkillsPage:NextPage = ()=>{
     const skills: Skill[] = [
         {
             name: 'Java',
-            icon: <FaJava size="55%"/>,
+            icon: <FaJava color="red" size="55%"/>,
             github: []
         }, {
             name: 'Golang',
-            icon: <SiGoland size="75%"/>,
+            icon: <SiGoland color={"#009dff"} size="75%"/>,
             github: []
         }, {
             name: 'Ruby',
-            icon: <SiRuby size="75%"/>,
+            icon: <SiRuby color="red" size="75%"/>,
             github: []
         }, {
             name: 'Swift',
-            icon: <SiSwift size="75%"/>,
+            icon: <SiSwift color={"#ff5900"} size="75%"/>,
             github: []
         },{
             name: 'React',
-            icon: <FaReact size="75%"/>,
+            icon: <FaReact color={"#009dff"} size="75%"/>,
             github: []
         },{
             name: 'Node.js',
-            icon: <FaNodeJs size="65%"/>,
+            icon: <FaNodeJs color={"#35af00"} size="65%"/>,
             github: []
         }
         ,{
             name: 'Next.js',
-            icon: <SiNextdotjs size="75%"/>,
+            icon: <SiNextdotjs color="black" size="75%"/>,
             github: []
         }, {
             name: 'Nuxt.js',
-            icon: <SiNuxtdotjs size="75%"/>,
+            icon: <SiNuxtdotjs color="green" size="75%"/>,
             github: []
         }, {
             name: 'CloudRun',
-            icon: <DiGoogleCloudPlatform size="75%"/>,
+            icon: <DiGoogleCloudPlatform color={"#0540a9"} size="75%"/>,
             github: []
         }, {
             name: 'Docker',
             icon: <Center pt={5}>
-                <FaDocker size="75%"/>
+                <FaDocker color={"#009dff"} size="75%"/>
             </Center>,
             github: []
         }, {
@@ -71,7 +71,7 @@ const SkillsPage:NextPage = ()=>{
             github: []
         }, {
             name: 'MongoDB',
-            icon: <SiMongodb size="75%"/>,
+            icon: <SiMongodb color="green" size="75%"/>,
             github: []
         }
     ]
