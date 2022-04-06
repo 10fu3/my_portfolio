@@ -15,7 +15,7 @@ const Home: NextPage = () => {
           <Center pb={5}>
             <chakra.h1 fontSize={"30px"}> {`Kengo's portfolio`} </chakra.h1>
           </Center>
-          <Flex>
+          <Center>
             <Link passHref={true} href={'skills'}>
               <chakra.a w={"33%"} style={{aspectRatio:"1"}}>
                 <Square w={"100%"}>
@@ -28,18 +28,18 @@ const Home: NextPage = () => {
                 </Square>
               </chakra.a>
             </Link>
-            <Link passHref={true} href={'history'}>
-              <chakra.a w={"33%"} style={{aspectRatio:"1"}}>
-                <Square w={"100%"}>
-                  <Box p={2}>
-                    <Center pt={2}>
-                      <RepeatClockIcon boxSize="65%" />
-                    </Center>
-                    <chakra.p pt={5} fontWeight="600" textAlign="center">My History</chakra.p>
-                  </Box>
-                </Square>
-              </chakra.a>
-            </Link>
+            {/*<Link passHref={true} href={'history'}>*/}
+            {/*  <chakra.a target="_blank" w={"33%"} style={{aspectRatio:"1"}}>*/}
+            {/*    <Square w={"100%"}>*/}
+            {/*      <Box p={2}>*/}
+            {/*        <Center pt={2}>*/}
+            {/*          <RepeatClockIcon boxSize="65%" />*/}
+            {/*        </Center>*/}
+            {/*        <chakra.p pt={5} fontWeight="600" textAlign="center">My History</chakra.p>*/}
+            {/*      </Box>*/}
+            {/*    </Square>*/}
+            {/*  </chakra.a>*/}
+            {/*</Link>*/}
             <Link passHref={true} href={'https://github.com/10fu3'}>
               <chakra.a w={"33%"} style={{aspectRatio:"1"}}>
                 <Square w={"100%"}>
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                 </Square>
               </chakra.a>
             </Link>
-          </Flex>
+          </Center>
         </Box>
       </Center>
     </Box>
