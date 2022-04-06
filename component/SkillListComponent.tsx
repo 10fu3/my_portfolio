@@ -19,12 +19,12 @@ const SkillsComponent:React.FC<{skills:GithubSkill[]}> = (props)=>{
 
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    return props.skills.length > 0  ? <Flex>
+    return props.skills.length > 0  ? <Flex pr={5}>
         <Box borderRadius="20px" p={2} position="relative" bg={"gray.100"}>
             <Box fontWeight="600">新</Box>
             <Box fontWeight="600" position="absolute" bottom="10px">古</Box>
         </Box>
-        <Box>
+        <Box w={"full"}>
             {
                 detail && <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
@@ -69,7 +69,7 @@ const SkillsComponent:React.FC<{skills:GithubSkill[]}> = (props)=>{
                         setDetail(s);
                         onOpen();
                     }}>
-                        <Box cursor={'pointer'} bg={"gray.50"} borderRadius="10px" borderWidth="1px" m={5} p={5}>
+                        <Box w="100%" cursor={'pointer'} bg={"gray.50"} borderRadius="10px" borderWidth="1px" m={5} p={5}>
                             <chakra.p fontWeight="600">{s.projectTitle}</chakra.p>
                             <chakra.p color="gray">{s.date}</chakra.p>
                         </Box>
