@@ -2,6 +2,19 @@ import {GithubSkill} from "../model/GithubSkill";
 
 export const AllSkills: GithubSkill[] = [
     {
+        date: "2022年4月16日",
+        description: "以前nuxt.jsで実装した新歓用のページを, 新しくNext.js+Chakra-UIで実装しなおしました\n" +
+            "Next.jsをSSGで利用し, netlifyにデプロイしています.",
+        name: "den3-lp",
+        projectTitle: "所属サークルの新歓用ページのリニューアル",
+        skillTag: [
+            'Next.js',
+            'React'
+        ],
+        pageUrl: "https://welcome-den3.netlify.app/",
+        url: 'den3-lp'
+    },
+    {
         date: "2022年3月 -",
         description: "C4Cというメディアに開発の面から携わっています.\n" +
             "Next.jsをSSGで利用し, CloudFlare Pagesにデプロイしています.",
@@ -55,7 +68,8 @@ export const AllSkills: GithubSkill[] = [
     {
         date: "2021年3月",
         description: "サークル勧誘用のLPをNuxt.jsで開発, Netlifyにデプロイ\n" +
-            "Github PagesをJSON APIとして利用することで, Webページの更新を簡単にできるようにした",
+            "Github PagesをJSON APIとして利用することで, Webページの更新を簡単にできるようにした.\n"+
+            "2022/04/18 追記: 新しくNext.jsでリニューアルしたため, 旧ページの全体像はGithubでご確認ください.",
         name: "den3welcomepage",
         projectTitle: "大学サークルLPを作成",
         skillTag: [
