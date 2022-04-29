@@ -39,7 +39,7 @@ const Home: NextPage = () => {
                 <Center flexDir={["column","inherit"]} display="flex" justifyContent="space-between" w="full" maxW="800px">
                   <Box>
                     <chakra.h1 pr={8} pl={4} pb={[10,0]} color='white' fontSize="30px">
-                      Kengo's portfolio
+                      {`Kengo's portfolio`}
                     </chakra.h1>
                   </Box>
                   <Box borderRadius="50%" overflow="hidden">
