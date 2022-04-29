@@ -4,7 +4,8 @@ export const AllSkills: GithubSkill[] = [
     {
         date: "2022年4月16日",
         description: "以前nuxt.jsで実装した新歓用のページを, 新しくNext.js+Chakra-UIで実装しなおしました\n" +
-            "Next.jsをSSGで利用し, netlifyにデプロイしています.",
+            "Next.jsをSSGで利用し, netlifyにデプロイしています.\n"+
+            "また, 説明会の日程をGithub Pages上のJSONファイルに情報を埋め込み,取得するようにすることで, 説明会情報の更新時にソースコードを編集せずに行うことができるようになりました.",
         name: "den3-lp",
         projectTitle: "所属サークルの新歓用ページのリニューアル",
         skillTag: [
