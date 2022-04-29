@@ -1,14 +1,14 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import {ChakraProvider} from "@chakra-ui/react";
+import {Box, ChakraProvider} from "@chakra-ui/react";
 import Head from "next/head";
 
 const App = ({ Component, pageProps }: AppProps)=>{
   return <ChakraProvider>
-    <Head>
-      <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet"/>
-    </Head>
-    <Component {...pageProps} />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet"/>
+    <Box fontFamily="'Noto Sans JP', sans-serif;">
+      <Component {...pageProps} />
+    </Box>
   </ChakraProvider>
 }
 

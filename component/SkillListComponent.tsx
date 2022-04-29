@@ -24,14 +24,14 @@ const SkillsComponent:React.FC<{skills:GithubSkill[]}> = (props)=>{
             <Box fontWeight="600">新</Box>
             <Box fontWeight="600" position="absolute" bottom="10px">古</Box>
         </Box>
-        <Box w={"full"}>
+        <Box  w={"full"} maxW="450px">
             {
                 detail && <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
                     <ModalContent>
                         <ModalHeader>{detail.projectTitle}</ModalHeader>
                         <ModalBody>
-                            {detail.description}
+                            {detail.description.split("\n").map(i=>{return <div dangerouslySetInnerHTML={{__html:i}} key={i}/>})}
                         </ModalBody>
 
                         <ModalFooter>
@@ -69,8 +69,19 @@ const SkillsComponent:React.FC<{skills:GithubSkill[]}> = (props)=>{
                         setDetail(s);
                         onOpen();
                     }}>
-                        <Box w="100%" cursor={'pointer'} bg={"gray.50"} borderRadius="10px" borderWidth="1px" m={5} p={5}>
+                        <Box boxSizing="border-box" w="100%" cursor={'pointer'} bg={"gray.50"} borderRadius="10px" borderWidth="1px" m={5} p={5}>
                             <chakra.p fontWeight="600">{s.projectTitle}</chakra.p>
+                            <Flex flexWrap="wrap" justifyContent="flex-start" w="full" pb={1}>
+                                {
+                                    s.skillTag.map(i=>{
+                                        return <Box pt={2} pr={2} key={`${s.name}-${i}`}>
+                                            <Box borderRadius="7px" borderWidth="1px" bgColor={"#f6f6f6"} p={1}>
+                                                {i}
+                                            </Box>
+                                        </Box>
+                                    })
+                                }
+                            </Flex>
                             <chakra.p color="gray">{s.date}</chakra.p>
                         </Box>
                     </div>

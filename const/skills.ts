@@ -16,10 +16,11 @@ export const AllSkills: GithubSkill[] = [
     },
     {
         date: "2022年3月 -",
-        description: "C4Cというメディアに開発の面から携わっています.\n" +
-            "Next.jsをSSGで利用し, CloudFlare Pagesにデプロイしています.",
+        description: "<a style='text-decoration: underline;font-weight: bold' href='https://cfcmedia.jp'>C4C</a>という記事メディアに開発の面から携わっています.\n" +
+            "Next.jsをSSGで利用し, CloudFlare Pagesにデプロイしています.\n"+
+            "また, CMSは私が独自開発した<a style='text-decoration: underline;font-weight: bold' href='https://github.com/10fu3/StackCMS'>StackCMS</a>をCloudRunにデプロイした上で利用し, そこに記事を入稿しています.",
         name: "cfcmedia.jp",
-        projectTitle: "C4C( cfcmedia.jp ) のServer Side Generationによる構築",
+        projectTitle: "記事メディア の Next.js (Server Side Generation)による構築",
         skillTag: [
             'Next.js',
             'React'
@@ -41,8 +42,18 @@ export const AllSkills: GithubSkill[] = [
     },
     {
         date: "2021年12月 -",
+        description: "Javaで非同期通信を行うためのNon-blocking IOを使い、Webフレームワークに求められるパスパラメータなどの機能を以前に実装した。\n" +
+            "\n" +
+            "Non-blocking IOのサンプルコードではシングルスレッドでの実装がほとんどであったが、今回独自に私がアップデートをして、ThreadPoolを使った方法によって多重化した。\n",
+        name: "NewNginj",
+        projectTitle: "C10Kに対応したウェブフレームワークのCPUバウンド処理改善",
+        skillTag: ["Java"],
+        url: "ex6-10fu3-1"
+    },
+    {
+        date: "2021年12月 -",
         description: "JamStack風なブログシステム（CMS）をGolangとReactで現在開発中です. \n" +
-            "-> https://cfcmedia.jp というサイトの構築に使用しました.",
+            "-> <a style='text-decoration: underline;font-weight: bold' href='https://cfcmedia.jp'>https://cfcmedia.jp</a> というサイトの構築に使用しました.",
         name: "StackCMS",
         projectTitle: "ヘッドレスCMSの実装",
         skillTag: [
@@ -53,7 +64,7 @@ export const AllSkills: GithubSkill[] = [
             'Docker',
             'CloudRun'
         ],
-        url: "StackCMS/tree/use"
+        url: "StackCMS"
     },
     {
         date: "2021年6月 - 2021年7月",
