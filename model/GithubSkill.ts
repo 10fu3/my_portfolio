@@ -1,6 +1,12 @@
 import {LanguageSkill} from "./LanguagesSkill";
 import {Language} from "../const/languages";
 
+export interface SkillImage{
+    type: 'img' | 'youtube',
+    src:string,
+    description: string,
+}
+
 export interface GithubSkill{
     name: string,
     pageUrl?:string,
@@ -8,5 +14,6 @@ export interface GithubSkill{
     description: string,
     projectTitle: string,
     skillTag: Language[],
-    date: string
+    date: string,
+    image?: SkillImage[]
 }

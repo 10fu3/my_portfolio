@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {GithubSkill} from "../model/GithubSkill";
+import {GithubSkill, SkillImage} from "../model/GithubSkill";
 import {
     Box, Button, Center, chakra,
     Flex,
@@ -17,7 +17,11 @@ const SkillsComponent:React.FC<{skills:GithubSkill[]}> = (props)=>{
 
     const [detail,setDetail] = useState<GithubSkill|null>(null)
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const imageDetail = useDisclosure()
+
+    const [image,setImage] = useState<SkillImage>()
 
     return props.skills.length > 0  ? <Flex pr={5}>
         <Box borderRadius="20px" p={2} position="relative" bg={"gray.100"}>
@@ -31,7 +35,45 @@ const SkillsComponent:React.FC<{skills:GithubSkill[]}> = (props)=>{
                     <ModalContent>
                         <ModalHeader>{detail.projectTitle}</ModalHeader>
                         <ModalBody>
+                            <Modal size="6xl" isOpen={imageDetail.isOpen} onClose={imageDetail.onClose}>
+                                <ModalOverlay />
+                                <ModalContent>
+                                    <ModalHeader>
+                                        <Button colorScheme='blue' onClick={()=>{
+                                            imageDetail.onClose();
+                                            setImage(undefined)
+                                        }}>
+                                            Close
+                                        </Button>
+                                        <chakra.p p={2} textAlign="center" fontWeight="bold">{image ? image.description : ''}</chakra.p>
+                                    </ModalHeader>
+                                    <ModalBody>
+                                        <Box borderWidth="1px">
+                                            <chakra.img  w="full" h="auto" src={image ? image.src : ""}/>
+                                        </Box>
+                                    </ModalBody>
+                                </ModalContent>
+                            </Modal>
                             {detail.description.split("\n").map(i=>{return <div dangerouslySetInnerHTML={{__html:i}} key={i}/>})}
+                            {
+                                detail.image ? <Box mt={6} maxH="400px" pr={2} overflowX="hidden" overflowY="auto">
+                                    <chakra.p textAlign="center">画像はクリックで拡大</chakra.p>
+                                    {
+                                        detail.image ? detail.image.map((image,i)=>{
+                                            return <Box mt={2} p={2} borderWidth="0.1px" key={`image-${i}`}>
+                                                {
+                                                    image.type === "img"
+                                                        ? <chakra.img _hover={{filter:"brightness(80%)"}} onClick={()=>{setImage(image);imageDetail.onOpen();}} w="full" h="auto" src={image.src}/>
+                                                        : <Box>
+
+                                                        </Box>
+                                                }
+                                                <chakra.p p={2} textAlign="center" fontWeight="bold">図{i+1} - {image.description}</chakra.p>
+                                            </Box>
+                                        }) : <></>
+                                    }
+                                </Box> : <></>
+                            }
                         </ModalBody>
 
                         <ModalFooter>
@@ -57,7 +99,7 @@ const SkillsComponent:React.FC<{skills:GithubSkill[]}> = (props)=>{
                                 onClose();
                                 setDetail(null)
                             }}>
-                                閉
+                                Close
                             </Button>
                         </ModalFooter>
                     </ModalContent>

@@ -12,7 +12,12 @@ export const AllSkills: GithubSkill[] = [
             'React'
         ],
         pageUrl: "https://welcome-den3.netlify.app/",
-        url: 'den3-lp'
+        url: 'den3-lp',
+        image: [{
+            src: "https://camo.githubusercontent.com/a6c097113bbc31b004921d8bb275e47437de7e2b0fea54788822090ddd7935d8/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3936353238303537373933363833383734362f3936353238343734313634373537373138382f53637265656e73686f745f323032322d30342d31385f61745f30312d31322d35305f64656e335f2e706e67",
+            type: "img",
+            description: "ページ概要",
+        }]
     },
     {
         date: "2022年3月 -",
@@ -26,7 +31,20 @@ export const AllSkills: GithubSkill[] = [
             'React'
         ],
         pageUrl: "https://cfcmedia.jp",
-        url: undefined
+        url: undefined,
+        image: [{
+            src: "https://media.discordapp.net/attachments/965280577936838746/969714048088281118/infra.PNG",
+            type:"img",
+            description: "サイトのインフラ構成図"
+        },{
+            src: "https://media.discordapp.net/attachments/965280577936838746/969697594488016946/1.PNG",
+            type: "img",
+            description: "サイト外観1"
+        },{
+            description: "サイト外観2", src: "https://media.discordapp.net/attachments/965280577936838746/969698559324741683/cfc.PNG?width=810&height=863", type: "img"
+        },{
+            description: "運用中の自作CMS(StackCMS)の画面", src: "https://media.discordapp.net/attachments/965280577936838746/969697841364750376/cms.PNG", type: "img"
+        }]
     },
     {
         date: "2022年3月 -",
@@ -38,7 +56,10 @@ export const AllSkills: GithubSkill[] = [
             'Node.js',
         ],
         pageUrl: undefined,
-        url: "c4c_bot"
+        url: "c4c_bot",
+        image:[{
+            description: "BOT運用中の例", src: "https://user-images.githubusercontent.com/31952653/163977143-076d5864-edfa-431f-87d1-002266075f11.PNG", type: "img"
+        }]
     },
     {
         date: "2021年12月 -",
@@ -64,7 +85,18 @@ export const AllSkills: GithubSkill[] = [
             'Docker',
             'CloudRun'
         ],
-        url: "StackCMS"
+        url: "StackCMS",
+        image:[{
+            src: "https://media.discordapp.net/attachments/965280577936838746/969714048088281118/infra.PNG",
+            type:"img",
+            description: "インフラの例 - 構成図"
+        },{
+            description: "運用中の自作CMS(StackCMS)のコンテンツ一覧画面", src: "https://media.discordapp.net/attachments/965280577936838746/969697841364750376/cms.PNG", type: "img"
+        },{
+            description: "運用中の自作CMS(StackCMS)の入稿画面", src: "https://media.discordapp.net/attachments/965280577936838746/969699958703935518/cms1.PNG", type: "img"
+        },{
+            description: "コンテンツスキーマの編集画面", src: "https://media.discordapp.net/attachments/965280577936838746/969700094469361714/cms3.PNG", type: "img"
+        }]
     },
     {
         date: "2021年6月 - 2021年7月",
@@ -87,7 +119,9 @@ export const AllSkills: GithubSkill[] = [
             'Nuxt.js'
         ],
         url: "den3welcomepage",
-        pageUrl: "https://welcome-den3.netlify.app/"
+        pageUrl: "https://welcome-den3.netlify.app/",
+        image:[{description: "勧誘用ページ", src: "https://camo.githubusercontent.com/2fe4848d53c2ffcf29fc84d116045e20d307e4e7741acd946509d9484f74d4af/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3936353238303537373933363833383734362f3936353238343833353930363136323730392f6f6c642d706167652e504e47", type: "img"}]
+
     },
     {
         date: "2021年1月",
@@ -98,7 +132,12 @@ export const AllSkills: GithubSkill[] = [
             'Java',
             'Vue.js'
         ],
-        url: "Idp"
+        url: "Idp",
+        image:[{
+            description: "ホーム画面", src: "https://user-images.githubusercontent.com/31952653/106193000-499cf300-61f0-11eb-9596-76f5e5400303.png", type: "img"
+        },{
+            description: "認可画面", src: "https://user-images.githubusercontent.com/31952653/106192896-1eb29f00-61f0-11eb-90e2-d0bc93cc4736.png", type: "img"
+        }]
     },
     {
         name: 'WaterServer',
