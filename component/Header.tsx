@@ -4,9 +4,9 @@ import Link from "next/link"
 
 const Header:React.FC<{name:string}> = (props)=>{
 
-    return <Flex boxShadow="md" bg={'gray.50'} alignItems="center" py={2} px={4} >
-        <Box flex="1" fontWeight="bold">
-            <Flex>
+    return <Flex color="white" boxShadow="md" bg={"#006ad3"} alignItems="center" py={2} px={4} >
+        <Box pt={4} pb={4} flex="1">
+            <Flex fontSize="25px">
                 <Link href={'/'}>
                     <a>
                         <Box _hover={{textDecoration:"underline"}}>
