@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Page from "../component/Page";
 import {Box, Center, chakra, Divider, Flex, Spacer} from "@chakra-ui/react";
 import React from "react";
-import {ExternalLinkIcon, RepeatClockIcon} from '@chakra-ui/icons';
+import {EditIcon, ExternalLinkIcon, RepeatClockIcon} from '@chakra-ui/icons';
 import {GoMarkGithub} from "react-icons/go";
 import Square from "../component/Square";
 
@@ -69,13 +69,25 @@ const Home: NextPage = () => {
                     </chakra.a>
                   </Link>
                   <Link passHref={true} href={'https://github.com/10fu3'}>
-                    <chakra.a w={"33%"} style={{aspectRatio:"1"}}>
+                    <chakra.a w={"33%"} target="_blank" style={{aspectRatio:"1"}}>
                       <Square w={"100%"}>
                         <Box p={2}>
                           <Center pt={2}>
                             <GoMarkGithub size="65%"/>
                           </Center>
                           <chakra.p pt={5} fontWeight="600" textAlign="center">Github</chakra.p>
+                        </Box>
+                      </Square>
+                    </chakra.a>
+                  </Link>
+                  <Link passHref={true} href={'http://den3.net/activity_diary/author/tofu/'}>
+                    <chakra.a w={"33%"} target="_blank" style={{aspectRatio:"1"}}>
+                      <Square w={"100%"}>
+                        <Box p={2}>
+                          <Center pt={2}>
+                            <EditIcon boxSize="65%"/>
+                          </Center>
+                          <chakra.p pt={5} fontWeight="600" textAlign="center">Tech Blog(?)</chakra.p>
                         </Box>
                       </Square>
                     </chakra.a>
