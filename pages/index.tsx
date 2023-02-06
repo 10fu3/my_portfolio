@@ -1,9 +1,9 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 import Page from "../component/Page";
-import {Box, Center, chakra, Divider, Flex, Spacer} from "@chakra-ui/react";
+import {Box, Center, chakra, Divider, Flex} from "@chakra-ui/react";
 import React from "react";
-import {EditIcon, ExternalLinkIcon, RepeatClockIcon} from '@chakra-ui/icons';
+import {EditIcon, ExternalLinkIcon} from '@chakra-ui/icons';
 import {GoMarkGithub} from "react-icons/go";
 import Square from "../component/Square";
 
@@ -136,8 +136,12 @@ const Home: NextPage = () => {
                       return <chakra.li key={s} listStyleType="none">
                         <Center mb={2}>
                           <Flex p={8} maxW="800px" w="full" bgColor="white">
-                            <Center fontSize="20px" h="30px" w="30px" border="solid 2px #006ad3" borderRadius="50%">
-                              {i+1}
+                            <Center>
+                              <Box h="30px" w="30px">
+                                <Center fontSize="20px" h="30px" w="30px" border="solid 2px #006ad3" borderRadius="50%">
+                                  {i+1}
+                                </Center>
+                              </Box>
                             </Center>
                             <Center>
                               <Box pl={4}>
