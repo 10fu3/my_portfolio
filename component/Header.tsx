@@ -1,4 +1,4 @@
-import {Box, Flex, Stack, Switch, useColorMode, useColorModeValue} from "@chakra-ui/react"
+import {Box, Flex, Stack} from "@chakra-ui/react"
 import React from "react";
 import Link from "next/link"
 
@@ -10,7 +10,7 @@ const Header:React.FC<{name:string}> = (props)=>{
                 <Link href={'/'}>
                     <a>
                         <Box _hover={{textDecoration:"underline"}}>
-                            {`Kengo Wada's portfolio`}
+                            {`Kengo Wada`}
                         </Box>
                     </a>
                 </Link>
