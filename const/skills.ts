@@ -2,6 +2,23 @@ import {GithubSkill} from "../model/GithubSkill";
 
 export const AllSkills: GithubSkill[] = [
     {
+        date: "2023年1月",
+        description: "授業で作ったLispの言語処理系(Java)をAndroidアプリとして移植しました\n",
+        name: "ReplInDroid",
+        projectTitle: "Lisp処理系のAndroid移植",
+        skillTag: [
+            'Android',
+            'Jetpack Compose'
+        ],
+        pageUrl: undefined,
+        url: 'ReplInDroid',
+        image: [{
+            src: "https://user-images.githubusercontent.com/31952653/215884478-33aae7e1-7aab-4e6c-8aa1-564b967f641c.png",
+            type: "img",
+            description: "アプリでLispを実行している様子",
+        }]
+    },
+    {
         date: "2022年4月16日",
         description: "以前nuxt.jsで実装した新歓用のページを, 新しくNext.js+Chakra-UIで実装しなおしました\n" +
             "Next.jsをSSGで利用し, netlifyにデプロイしています.\n"+
@@ -173,6 +190,15 @@ export const AllSkills: GithubSkill[] = [
         skillTag: [
             'Swift'
         ],
+        image: [{
+            description: "スレッド一覧",
+            src: "https://user-images.githubusercontent.com/31952653/166111020-9012adf2-e8e3-4de7-9de9-118f9d8d433f.png",
+            type: "img"
+        },{
+            description: "スレッドを表示する画面",
+            src: "https://user-images.githubusercontent.com/31952653/166111029-a102af53-f58c-4e6f-91e5-4b4d0f0ad683.png",
+            type: "img"
+        }],
         url: "Slash"
     },{
         date: "2016年7月",
